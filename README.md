@@ -1,5 +1,5 @@
 <p align="center">
-  <img src=".public/assets/favicon.svg" alt="Dream Travel Agency Logo" width="80" height="80">
+  <img src="./public/assets/favicon.svg" alt="Dream Travel Agency Logo" width="80" height="80">
 </p>
 
 # Dream Travel Agency
