@@ -1,54 +1,103 @@
-# React + TypeScript + Vite
+<p align="center">
+  <img src="./assets/favicon.svg" alt="Dream Travel Agency Logo" width="80" height="80">
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Dream Travel Agency
 
-Currently, two official plugins are available:
+[![React](https://img.shields.io/badge/React-18.2.0-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0.2-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-4.4.5-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3.0-7952B3?logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Overview
 
-## Expanding the ESLint configuration
+A frontend prototype for a fictional travel agency website. The project simulates a complete travel booking platform homepage with a focus on visual presentation and UX design.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Features
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- Responsive design with Bootstrap 5
+- Component-based architecture using React
+- Type-safe development with TypeScript
+- Fast development environment powered by Vite
+- Modular structure for easy expansion
+
+## Project Structure
+
+```
+dream-travel/
+├── public/                # Static assets served as-is
+│   └── assets/
+│       ├── favicon.svg
+│       └── logo.svg
+├── src/                   # Source code
+│   ├── assets/            # Project assets
+│   ├── components/        # Reusable UI components
+│   │   ├── DestinationCard.tsx
+│   │   ├── Footer.tsx
+│   │   ├── Hero.tsx
+│   │   ├── Navbar.tsx
+│   │   └── PackageCard.tsx
+│   ├── database/          # Mock data storage
+│   ├── pages/             # Application pages
+│   │   ├── AboutUs.tsx
+│   │   ├── Contact.tsx
+│   │   ├── Destinations.tsx
+│   │   └── Home.tsx
+│   ├── styles/            # Global styles
+│   ├── App.tsx            # Main application component
+│   └── main.tsx           # Entry point
+├── index.html             # HTML entry point
+└── configuration files    # Various config files
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Installation
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+1. Clone the repository
+```bash
+git clone https://github.com/veras-d/dream-travel-agency.git
+cd dream-travel
 ```
+
+2. Install dependencies
+```bash
+npm install
+```
+
+3. Start development server
+```bash
+npm run dev
+```
+
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run lint` - Run ESLint
+- `npm run preview` - Preview production build
+
+## Technologies
+
+- **React** - UI library
+- **TypeScript** - Type-safe JavaScript
+- **Vite** - Build tool and dev server
+- **Bootstrap** - CSS framework
+- **React Router** - Navigation
+
+## Live Demo
+
+View the live project: [Dream Travel Agency](dream-travel-ruddy.vercel.app)
+
+## License
+
+[MIT](LICENSE)
+
+---
+
+## Buy Me a Ko-Fi
+[![Ko-Fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/verivi)
+
+---
+
+<div align="center"">
+  <p>© 2025 VERAS. All rights reserved.<p/>
+</div>
