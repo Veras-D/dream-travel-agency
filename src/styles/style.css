@@ -1,0 +1,150 @@
+html body {
+  background: linear-gradient(135deg, #4b0082, #6a0dad) !important;
+  color: #fff !important;
+  min-height: 100vh;
+  padding-bottom: 60px;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+p, h1, h2, h3, h4, h5, h6, span, div, label {
+  color: #fff !important;
+}
+
+.navbar .navbar-brand {
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  color: #fff !important;
+}
+
+.navbar {
+  background-color: #4b0082 !important;
+}
+
+.navbar.navbar-dark.bg-gradient {
+  background: linear-gradient(135deg, #5a0092, #4b0082) !important;
+}
+
+.navbar .nav-link {
+  color: rgba(255, 255, 255, 0.85) !important;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #d9a6ff !important;
+}
+
+.btn.btn-custom,
+button.btn-custom {
+  background-color: #6a0dad !important;
+  color: white !important;
+  border: none !important;
+}
+
+.btn.btn-custom:hover,
+button.btn-custom:hover {
+  background-color: #5a0092 !important;
+  color: white !important;
+}
+
+.card.destination-card
+.card.destino-card {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  margin-bottom: 20px !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.card.destination-card:hover,
+.card.destino-card:hover {
+  transform: scale(1.05) !important;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.card.destination-card img,
+.card.destino-card img,
+.destino-img {
+  border-radius: 10px !important;
+  height: 200px !important;
+  object-fit: cover !important;
+  width: 100% !important;
+}
+
+
+.card {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #fff !important;
+}
+
+.card-body {
+  color: #fff !important;
+}
+
+.card-title {
+  color: #fff !important;
+}
+
+.card-text {
+  color: #fff !important;
+}
+
+.team-member {
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  margin-bottom: 20px !important;
+  border-radius: 8px !important;
+  padding: 15px !important;
+}
+
+.team-member:hover {
+  transform: scale(1.05) !important;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.team-img {
+  width: 150px !important;
+  height: 150px !important;
+  object-fit: cover !important;
+  border-radius: 50% !important;
+  margin: 0 auto 15px !important;
+  display: block !important;
+}
+
+footer {
+  position: fixed !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  background-color: #4b0082 !important;
+  color: #ddd !important;
+  z-index: 1000 !important;
+  padding: 10px 0 !important;
+}
+
+.content-wrapper {
+  padding: 20px 0 70px !important;
+  min-height: calc(100vh - 56px - 60px) !important;
+}
+
+.about-section {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px !important;
+  padding: 20px !important;
+  margin-bottom: 20px !important;
+  color: #fff !important;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 80px !important;
+  }
+  
+  .card-container {
+    margin-bottom: 20px !important;
+  }
+  
+  .team-img {
+    width: 120px !important;
+    height: 120px !important;
+  }
+}
