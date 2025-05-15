@@ -167,6 +167,10 @@ footer {
     margin-bottom: 20px !important;
   }
   
+  .card-body.purple {
+  background-color: #6a0dad !important;
+  }
+  
   .team-img {
     width: 120px !important;
     height: 120px !important;
