@@ -47,6 +47,27 @@ button.btn-custom:hover {
   color: white !important;
 }
 
+.card.destination-card-top
+.card.destino-card-top {
+  overflow: hidden !important;
+  margin-bottom: 20px !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.card.destination-card-top:hover,
+.card.destino-card-top:hover {
+  transform: scale(1.05) !important;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.card.destination-card-top img,
+.card.destino-card-top img,
+.destino-img-top {
+  height: 200px !important;
+  object-fit: cover !important;
+  width: 100% !important;
+}
+
 .card.destination-card
 .card.destino-card {
   background-color: rgba(255, 255, 255, 0.1) !important;
@@ -62,6 +83,10 @@ button.btn-custom:hover {
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15) !important;
 }
 
+.card-body.purple {
+  background-color: #6a0dad !important;
+}
+
 .card.destination-card img,
 .card.destino-card img,
 .destino-img {
@@ -70,7 +95,6 @@ button.btn-custom:hover {
   object-fit: cover !important;
   width: 100% !important;
 }
-
 
 .card {
   background-color: rgba(255, 255, 255, 0.1) !important;

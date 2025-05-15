@@ -12,9 +12,9 @@ const DestinationCard: React.FC<DestinationCardProps> = ({
   altText 
 }) => {
   return (
-    <div className="card bg-secondary text-light destination-card destino-card h-100">
-      <img src={imageUrl} className="card-img-top" alt={altText} />
-      <div className="card-body bg-purple">
+    <div className="card bg-secondary text-light destination-card-top destino-card-top rounded-3 h-100">
+      <img src={imageUrl} className="card-img rounded-3" alt={altText} />
+      <div className="card-body purple rounded-3">
         <h5 className="card-title">{title}</h5>
         <p className="card-text">{description}</p>
       </div>
