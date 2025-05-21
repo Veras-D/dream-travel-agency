@@ -1,17 +1,38 @@
-apiVersion: v1
-kind: Service
+name: Run Tests
 
-metadata:
-  name: journey-service
-  labels:
-    app: journey
+on: [push, pull_request]
 
-spec: 
-  selector:
-    app: journey
-  type: ClusterIP
-  ports:
-  - name: journey-service
-    port: 80
-    targetPort: 8080
-    protocol: TCP
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    services:
+      xvfb:
+        image: cypress/browsers:node18.12.0-chrome106
+        options: --entrypoint "Xvfb"
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run unit and integration tests (Jest)
+        run: npm run test
+
+      - name: Start the app (Vite) in background
+        run: npm run dev &
+        env:
+          CI: true
+
+      - name: Wait for Vite to start
+        run: npx wait-on http://localhost:5173
+
+      - name: Run end-to-end tests (Cypress)
+        run: npm run cypress:run
+
