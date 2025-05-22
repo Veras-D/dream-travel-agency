@@ -14,11 +14,15 @@ jobs:
       - name: Run unit and integration tests (Jest)
         run: npm run test
       - name: Start the app (Vite) in background
-        run: npm run dev:ci &
+        run: |
+          npm run dev:ci &
+          echo "Vite started in background"
         env:
           CI: true
       - name: Wait for Vite to start
-        run: npx wait-on http://localhost:5173 --timeout=60000
+        run: |
+          echo "Waiting for Vite server..."
+          npx wait-on http://localhost:5173 --timeout=120000 --interval=2000 --verbose
       - name: Run end-to-end tests (Cypress)
         run: npm run cypress:run
         env:
