@@ -1,8 +1,22 @@
+export interface DestinationHome {
+  id: number;
+  title: string;
+  description: string;
+  imageUrl: string;
+  altText: string;
+}
+
 export interface Destination {
   id: number;
   title: string;
   description: string;
   image: string;
+}
+
+export interface PackageHome {
+  id: number;
+  title: string;
+  description: string;
 }
 
 export interface Package {
@@ -18,6 +32,30 @@ export interface TeamMember {
   description: string;
   image: string;
 }
+
+export const destinationsHome: DestinationHome[] = [
+  {
+    id: 1,
+    title: 'Tropical Beaches',
+    description: 'Enjoy a tropical paradise with crystal clear waters and white sands. Perfect to relax and reconnect with nature.',
+    imageUrl: 'https://mangojourneys.com/en/wp-content/uploads/2015/05/950x475-bigstock-Two-beach-lounge-chairs-under-68994418-400x300.jpg',
+    altText: 'Beach'
+  },
+  {
+    id: 2,
+    title: 'Mountains',
+    description: 'Explore incredible trails and live adventures in the mountains. Ideal for ecotourism and adrenaline lovers.',
+    imageUrl: 'https://alaska-highway.org/wp-content/uploads/2016/12/mthayes.jpg',
+    altText: 'Mountains'
+  },
+  {
+    id: 3,
+    title: 'Iconic Cities',
+    description: 'Immerse yourself in the culture and gastronomy of a modern city. Leisure, art, and fun await you!',
+    imageUrl: 'https://caminhodafe.com.br/ptbr/wp-content/uploads/2021/03/8-400x300.jpg',
+    altText: 'Cities'
+  }
+];
 
 export const destinations: Destination[] = [
   {
@@ -57,6 +95,20 @@ export const destinations: Destination[] = [
     image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/4b/b0/59/serena-giornata-di-giugno.jpg?w=400&h=300&s=1"
   }
 ];
+
+export const packagesHome: PackageHome[] = [
+  {
+    id: 1,
+    title: 'Romantic Package',
+    description: 'Perfect experiences for couples in stunning places.'
+  },
+  {
+    id: 2,
+    title: 'Family Package',
+    description: 'Guaranteed fun for the whole family in unique destinations.'
+  }
+];
+
 
 export const packages: Package[] = [
   {

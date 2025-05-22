@@ -171,4 +171,3 @@ npx cypress run
 <div align="center">
   <p>© 2025 VERAS. All rights reserved.</p>
 </div>
-```
