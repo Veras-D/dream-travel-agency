@@ -1,29 +1,78 @@
 name: Run Tests
+
 on: [push, pull_request]
+
 jobs:
   tests:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      
       - name: Use Node.js 18
         uses: actions/setup-node@v4
         with:
           node-version: 18
+          
       - name: Install dependencies
         run: npm ci
+        
       - name: Run unit and integration tests (Jest)
         run: npm run test
+        
+      - name: Test Vite build
+        run: |
+          echo "Testing if Vite can build..."
+          npm run build
+        
       - name: Start the app (Vite) in background
         run: |
-          npm run dev:ci &
-          echo "Vite started in background"
+          echo "Starting Vite server..."
+          nohup npm run dev:ci > vite.log 2>&1 &
+          VITE_PID=$!
+          echo "Vite PID: $VITE_PID"
+          echo $VITE_PID > vite.pid
+          sleep 5
+          echo "=== Vite logs after 5 seconds ==="
+          cat vite.log || echo "No log file found"
+          echo "=== Process check ==="
+          ps aux | grep vite || echo "No vite process found"
+          echo "=== Network check ==="
+          netstat -tlnp | grep 5173 || echo "Port 5173 not in use"
         env:
           CI: true
+          
       - name: Wait for Vite to start
         run: |
           echo "Waiting for Vite server..."
-          npx wait-on http://localhost:5173 --timeout=120000 --interval=2000 --verbose
+          # Tentar várias URLs possíveis
+          npx wait-on http://127.0.0.1:5173 --timeout=60000 --interval=2000 --verbose || \
+          npx wait-on http://localhost:5173 --timeout=60000 --interval=2000 --verbose || \
+          npx wait-on http://0.0.0.0:5173 --timeout=60000 --interval=2000 --verbose
+          
+      - name: Debug if wait-on failed
+        if: failure()
+        run: |
+          echo "=== Final Vite logs ==="
+          cat vite.log || echo "No log file found"
+          echo "=== Process status ==="
+          if [ -f vite.pid ]; then
+            VITE_PID=$(cat vite.pid)
+            ps -p $VITE_PID || echo "Vite process $VITE_PID not running"
+          fi
+          echo "=== All processes ==="
+          ps aux | grep -E "(vite|node)" || echo "No relevant processes"
+          echo "=== Network status ==="
+          netstat -tlnp || echo "Cannot check network"
+          
       - name: Run end-to-end tests (Cypress)
         run: npm run cypress:run
         env:
           DISPLAY: ':99'
+          
+      - name: Cleanup
+        if: always()
+        run: |
+          if [ -f vite.pid ]; then
+            VITE_PID=$(cat vite.pid)
+            kill $VITE_PID 2>/dev/null || echo "Process already terminated"
+          fi
