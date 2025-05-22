@@ -4,7 +4,6 @@ import logo from '../assets/logo.svg';
 
 const Navbar = () => {
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
-
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
 
   return (
@@ -28,7 +27,11 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         
-        <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`} id="navbarNav">
+        <div 
+          className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`} 
+          id="navbarNav"
+          data-testid="navbar-collapse"
+        >
           <ul className="navbar-nav ms-auto text-uppercase">
             <li className="nav-item">
               <Link className="nav-link" to="/destinations">
