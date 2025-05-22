@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1747882613407" clover="3.2.0">
-  <project timestamp="1747882613407" name="All files">
+<coverage generated="1747892967655" clover="3.2.0">
+  <project timestamp="1747892967655" name="All files">
     <metrics statements="12" coveredstatements="12" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3" elements="19" coveredelements="19" complexity="0" loc="12" ncloc="12" packages="1" files="2" classes="2"/>
     <file name="Hero.tsx" path="/home/veras/Veras/scripts/old/node/dream-travel/src/components/Hero.tsx">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
