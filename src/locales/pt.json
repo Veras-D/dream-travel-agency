@@ -31,6 +31,16 @@
     "message": "Mensagem",
     "send_message": "Enviar Mensagem",
     "available_destinations": "Destinos Disponíveis",
-    "all_rights_reserved": "Dream Travel Agency. Todos os direitos reservados."
+    "all_rights_reserved": "Dream Travel Agency. Todos os direitos reservados.",
+    "destination_title_1": "Praias Tropicais",
+    "destination_description_1": "Desfrute de um paraíso tropical com águas cristalinas e areias brancas. Perfeito para relaxar e se reconectar com a natureza.",
+    "destination_title_2": "Montanhas",
+    "destination_description_2": "Explore trilhas incríveis e viva aventuras nas montanhas. Ideal para os amantes de ecoturismo e adrenalina.",
+    "destination_title_3": "Cidades Icônicas",
+    "destination_description_3": "Mergulhe na cultura e gastronomia de uma cidade moderna. Lazer, arte e diversão esperam por você!",
+    "package_title_1": "Pacote Romântico",
+    "package_description_1": "Experiências perfeitas para casais em lugares deslumbrantes.",
+    "package_title_2": "Pacote Família",
+    "package_description_2": "Diversão garantida para toda a família em destinos únicos."
   }
 }
