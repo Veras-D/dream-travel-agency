@@ -1,0 +1,36 @@
+{
+  "translation": {
+    "destinations": "Destinos",
+    "about_us": "Sobre Nós",
+    "contact": "Contato",
+    "dream_travel": "Dream Travel",
+    "explore_world": "Explore o mundo com a Dream Travel",
+    "discover_destinations": "Descubra destinos incríveis e crie memórias inesquecíveis.",
+    "check_packages": "Confira nossos pacotes",
+    "popular_destinations": "Destinos Populares",
+    "special_packages": "Pacotes Especiais",
+    "learn_more": "Saiba Mais",
+    "who_we_are": "Quem Somos",
+    "passionate_about_travel": "Na Dream Travel, somos apaixonados por oferecer experiências únicas para viajantes de todo o mundo. Nosso objetivo é proporcionar viagens inesquecíveis com destinos exclusivos e pacotes personalizados.",
+    "our_mission": "Nossa Missão",
+    "mission_text": "Conectar pessoas aos melhores destinos turísticos com qualidade, confiança e excelência no atendimento. Criamos experiências que tornam suas viagens mais emocionantes e seguras.",
+    "our_vision": "Nossa Visão",
+    "vision_text": "Ser a principal agência de viagens digital do Brasil, reconhecida pela inovação, sustentabilidade e excelência no atendimento ao cliente.",
+    "our_values": "Nossos Valores",
+    "values_list": [
+      "Qualidade em todos os serviços",
+      "Sustentabilidade e responsabilidade social",
+      "Inovação contínua nas ofertas",
+      "Foco na experiência do cliente"
+    ],
+    "our_team": "Nossa Equipe",
+    "contact_us": "Entre em Contato",
+    "contact_text": "Tem dúvidas ou está pronto para planejar sua próxima aventura? Entre em contato conosco!",
+    "name": "Nome",
+    "email": "Email",
+    "message": "Mensagem",
+    "send_message": "Enviar Mensagem",
+    "available_destinations": "Destinos Disponíveis",
+    "all_rights_reserved": "Dream Travel Agency. Todos os direitos reservados."
+  }
+}

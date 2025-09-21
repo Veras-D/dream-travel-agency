@@ -1,0 +1,36 @@
+{
+  "translation": {
+    "destinations": "Destinations",
+    "about_us": "About Us",
+    "contact": "Contact",
+    "dream_travel": "Dream Travel",
+    "explore_world": "Explore the world with Dream Travel",
+    "discover_destinations": "Discover incredible destinations and create unforgettable memories.",
+    "check_packages": "Check out our packages",
+    "popular_destinations": "Popular Destinations",
+    "special_packages": "Special Packages",
+    "learn_more": "Learn More",
+    "who_we_are": "Who We Are",
+    "passionate_about_travel": "At Dream Travel, we are passionate about offering unique experiences to travelers from all over the world. Our goal is to provide unforgettable journeys with exclusive destinations and personalized packages.",
+    "our_mission": "Our Mission",
+    "mission_text": "To connect people with the best tourist destinations through quality, trust, and service excellence. We create experiences that make your travels more exciting and safe.",
+    "our_vision": "Our Vision",
+    "vision_text": "To be the leading digital travel agency in Brazil, recognized for innovation, sustainability, and excellence in customer service.",
+    "our_values": "Our Values",
+    "values_list": [
+      "Quality in all services",
+      "Sustainability and social responsibility",
+      "Continuous innovation in offerings",
+      "Focus on customer experience"
+    ],
+    "our_team": "Our Team",
+    "contact_us": "Contact Us",
+    "contact_text": "Have questions or ready to plan your next adventure? Get in touch with us!",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send_message": "Send Message",
+    "available_destinations": "Available Destinations",
+    "all_rights_reserved": "Dream Travel Agency. All rights reserved."
+  }
+}
