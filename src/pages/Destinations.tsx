@@ -1,10 +1,13 @@
 import { destinations } from '../database/database';
+import { useTranslation } from 'react-i18next';
 
 const Destinations = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="destinations" className="py-5 mb-5">
       <div className="container">
-        <h2 className="text-center text-uppercase mb-5">Available Destinations</h2>
+        <h2 className="text-center text-uppercase mb-5">{t('available_destinations')}</h2>
         <div className="row">
           {destinations.map(destination => (
             <div className="col-lg-4 col-md-6 mb-4" key={destination.id}>
@@ -12,11 +15,11 @@ const Destinations = () => {
                 <img 
                   src={destination.image} 
                   className="card-img-top destino-img" 
-                  alt={destination.title} 
+                  alt={t(destination.titleKey)} 
                 />
                 <div className="card-body">
-                  <h5 className="card-title">{destination.title}</h5>
-                  <p className="card-text">{destination.description}</p>
+                  <h5 className="card-title">{t(destination.titleKey)}</h5>
+                  <p className="card-text">{t(destination.descriptionKey)}</p>
                 </div>
               </div>
             </div>
