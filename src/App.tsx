@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -7,21 +8,21 @@ import AboutUs from './pages/AboutUs';
 import Contact from './pages/Contact';
 import './styles/style.css';
 
-function App() {
+const App = () => {
   return (
-    <Router>
-      <Navbar />
-      <div className="content-wrapper">
+    <Suspense fallback="loading">
+      <Router>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/destinations" element={<Destinations />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-      </div>
-      <Footer />
-    </Router>
+        <Footer />
+      </Router>
+    </Suspense>
   );
-}
+};
 
 export default App;
