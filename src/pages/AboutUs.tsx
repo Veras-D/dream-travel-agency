@@ -45,7 +45,7 @@ const AboutUs = () => {
                 <div className="card-body text-center">
                   <h3 className="card-title mb-4 text-secondary">{t('our_values')}</h3>
                   <ul className="list-unstyled text-secondary">
-                    {t('values_list', { returnObjects: true }).map((value, index) => (
+                    {(t('values_list', { returnObjects: true }) as string[]).map((value: string, index: number) => (
                       <li key={index} className="mb-2">{value}</li>
                     ))}
                   </ul>
