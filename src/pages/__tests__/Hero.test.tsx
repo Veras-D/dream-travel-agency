@@ -8,13 +8,13 @@ describe('Hero component', () => {
   test('renders Hero section with title and button', () => {
     render(<Hero />, { wrapper: MemoryRouter });
     
-    const heading = screen.getByRole('heading', { name: /explore the world with dream travel/i });
+    const heading = screen.getByRole('heading', { name: /explore_world/i });
     expect(heading).toBeInTheDocument();
     
-    const subtitle = screen.getByText(/discover incredible destinations and create unforgettable memories/i);
+    const subtitle = screen.getByText(/discover_destinations/i);
     expect(subtitle).toBeInTheDocument();
     
-    const ctaButton = screen.getByRole('link', { name: /check out our packages/i });
+    const ctaButton = screen.getByRole('link', { name: /check_packages/i });
     expect(ctaButton).toBeInTheDocument();
   });
 });

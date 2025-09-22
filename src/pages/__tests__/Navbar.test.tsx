@@ -10,14 +10,14 @@ describe('Navbar', () => {
     render(<Navbar />, { wrapper: MemoryRouter });
     const logo = screen.getByAltText(/globe icon/i);
     expect(logo).toBeInTheDocument();
-    const brandName = screen.getByText(/dream travel/i);
+    const brandName = screen.getByText(/dream_travel/i);
     expect(brandName).toBeInTheDocument();
   });
 
   test('renders navigation links', () => {
     render(<Navbar />, { wrapper: MemoryRouter });
     expect(screen.getByRole('link', { name: /destinations/i })).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /about us/i })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /about_us/i })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /contact/i })).toBeInTheDocument();
   });
 

@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">80% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>9/9</span>
+                <span class='fraction'>12/15</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">40% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>2/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">78.57% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>8/8</span>
+                <span class='fraction'>11/14</span>
             </div>
         
             
@@ -120,13 +120,34 @@
 <a name='L55'></a><a href='#L55'>55</a>
 <a name='L56'></a><a href='#L56'>56</a>
 <a name='L57'></a><a href='#L57'>57</a>
-<a name='L58'></a><a href='#L58'>58</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -175,22 +196,37 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">import { useState } from 'react';
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">import { useTranslation } from 'react-i18next';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.svg';
 &nbsp;
 const Navbar = () =&gt; {
+  const { t, i18n } = useTranslation();
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
   const handleNavCollapse = () =&gt; setIsNavCollapsed(!isNavCollapsed);
+&nbsp;
+  const changeLanguage = <span class="fstat-no" title="function not covered" >(l</span>ng: string) =&gt; {
+<span class="cstat-no" title="statement not covered" >    i18n.changeLanguage(lng);</span>
+  };
 &nbsp;
   return (
     &lt;nav className="navbar navbar-expand-lg navbar-dark bg-gradient pt-4"&gt;
       &lt;div className="container"&gt;
         &lt;Link className="navbar-brand d-flex align-items-center" to="/"&gt;
           &lt;img src={logo} alt="Globe Icon" width="30" height="30" /&gt;
-          Dream Travel
+          {t('dream_travel')}
         &lt;/Link&gt;
         
         &lt;button 
@@ -214,18 +250,27 @@ const Navbar = () =&gt; {
           &lt;ul className="navbar-nav ms-auto text-uppercase"&gt;
             &lt;li className="nav-item"&gt;
               &lt;Link className="nav-link" to="/destinations"&gt;
-                Destinations
+                {t('destinations')}
               &lt;/Link&gt;
             &lt;/li&gt;
             &lt;li className="nav-item"&gt;
               &lt;Link className="nav-link" to="/about"&gt;
-                About Us
+                {t('about_us')}
               &lt;/Link&gt;
             &lt;/li&gt;
             &lt;li className="nav-item"&gt;
               &lt;Link className="nav-link" to="/contact"&gt;
-                Contact
+                {t('contact')}
               &lt;/Link&gt;
+            &lt;/li&gt;
+            &lt;li className="nav-item dropdown"&gt;
+              &lt;a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+                {t('language')}
+              &lt;/a&gt;
+              &lt;ul className="dropdown-menu" aria-labelledby="navbarDropdown"&gt;
+                &lt;li&gt;&lt;button className="dropdown-item" onClick={<span class="fstat-no" title="function not covered" >() =</span>&gt; <span class="cstat-no" title="statement not covered" >changeLanguage('en')}</span>&gt;English&lt;/button&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;button className="dropdown-item" onClick={<span class="fstat-no" title="function not covered" >() =</span>&gt; <span class="cstat-no" title="statement not covered" >changeLanguage('pt')}</span>&gt;Português&lt;/button&gt;&lt;/li&gt;
+              &lt;/ul&gt;
             &lt;/li&gt;
           &lt;/ul&gt;
         &lt;/div&gt;
@@ -241,7 +286,7 @@ export default Navbar;</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-05-22T05:49:27.638Z
+                at 2025-09-22T02:07:36.512Z
             </div>
         <script src="prettify.js"></script>
         <script>
